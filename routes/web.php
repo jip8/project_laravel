@@ -10,3 +10,7 @@ Route::get('/', function () {
 Route::get('/bemvindo', [WelcomeController::class, 'index']);
 
 Route::get('/tarefas', \App\Livewire\TaskList::class);
+
+Route::get('/produtos', function () {
+    return view('produtos');
+});
