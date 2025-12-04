@@ -1,7 +1,13 @@
 import './bootstrap';
+
+import Alpine from 'alpinejs';
 import { createApp } from 'vue';
 import ProductList from './components/ProductList.vue';
 
-const app = createApp(ProductList);
+window.Alpine = Alpine;
+Alpine.start();
 
-app.mount('#app');
+if (document.getElementById('app')) {
+    const app = createApp(ProductList);
+    app.mount('#app');
+}
