@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
+    public function index()
+    {
+        return view('dashboard');
+    }
+
     public function usuarios()
     {
         $users = User::orderBy('created_at', 'desc')->get();
